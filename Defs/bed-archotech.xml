@@ -27,12 +27,12 @@
             <MaxHitPoints>350</MaxHitPoints>
             <Flammability>0.25</Flammability>
             <Mass>300</Mass>
-            <MarketValue>6000</MarketValue>
+            <MarketValue>4000</MarketValue>
 
             <Comfort>-10</Comfort>
             <Beauty>-500</Beauty>
 
-            <BedRestEffectiveness>10.0</BedRestEffectiveness>
+            <BedRestEffectiveness>2.0</BedRestEffectiveness>
             <ImmunityGainSpeedFactor>2.0</ImmunityGainSpeedFactor>
             <MedicalTendQualityOffset>0.1</MedicalTendQualityOffset>
             <SurgerySuccessChanceFactor>1.2</SurgerySuccessChanceFactor>
