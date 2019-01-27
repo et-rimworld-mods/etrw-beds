@@ -61,7 +61,7 @@
         <thingCategories>
             <li>BuildingsFurniture</li>
         </thingCategories>
-        <tradeability>Buyable</tradeability>
+        <tradeability>Sellable</tradeability>
         <thingSetMakerTags>
             <li>RewardSpecial</li>
         </thingSetMakerTags>
