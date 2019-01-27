@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>ET's Beds</name>
+    <author>Elia Tarasoff</author>
+    <url>https://github.com/et-rimworld-mods/etrw-beds</url>
+    <supportedVersions>
+        <li>1.0</li>
+    </supportedVersions>
+    <description>See the README.md file.</description>
+</ModMetaData>

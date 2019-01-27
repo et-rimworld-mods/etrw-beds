@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="BuildingBase">
+        <defName>ArchotechBed</defName>
+        <label>Enertron</label>
+        <description>A person-sized metal sarcophagus, filled with mysterious technology. Hypothesized to have been produced by an advanced civilization in an alternate universe, then transplanted by an archotech AI.\n\nRegardless of its origins, it provides the user with a full night's sleep in a fraction of the time, and helps heal infections. It even has a built-in lamp, that illuminates organs during surgery!\n\nIt does however cause pain while its in operation, and induces nausea in people who look at it for too long.</description>
+
+        <graphicData>
+            <texPath>Things/Building/Ship/ShipCryptosleepCasket</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(1, 2)</drawSize>
+            <shadowData>
+                <volume>(0.83, 0.3, 1.7)</volume>
+            </shadowData>
+        </graphicData>
+        <size>(1,2)</size>  <!-- For beds, this affects how many pawns can be assigned / use it... -->
+        <altitudeLayer>Building</altitudeLayer>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <rotatable>true</rotatable>
+        <drawGUIOverlay>true</drawGUIOverlay>
+
+        <tickerType>Normal</tickerType>
+        <canOverlapZones>false</canOverlapZones>
+        <thingClass>Building_Bed</thingClass>
+        <blockWind>true</blockWind>
+        <statBases>
+            <MaxHitPoints>350</MaxHitPoints>
+            <Flammability>0.25</Flammability>
+            <Mass>300</Mass>
+            <MarketValue>6000</MarketValue>
+
+            <Comfort>-10</Comfort>
+            <Beauty>-500</Beauty>
+
+            <BedRestEffectiveness>10.0</BedRestEffectiveness>
+            <ImmunityGainSpeedFactor>2.0</ImmunityGainSpeedFactor>
+            <MedicalTendQualityOffset>0.1</MedicalTendQualityOffset>
+            <SurgerySuccessChanceFactor>1.2</SurgerySuccessChanceFactor>
+        </statBases>
+        <building>
+            <uninstallWork>500</uninstallWork>
+            <bed_showSleeperBody>False</bed_showSleeperBody>
+            <bed_healPerDay>15</bed_healPerDay>
+        </building>
+        <comps>
+            <li Class="CompProperties_RoomIdentifier">
+                <roomStat>Impressiveness</roomStat>
+            </li>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>3</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+            </li>
+        </comps>
+        <fillPercent>0.5</fillPercent>
+        <pathCost>70</pathCost>
+        <passability>PassThroughOnly</passability>
+        <castEdgeShadows>True</castEdgeShadows>
+        <techLevel>Ultra</techLevel>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <thingCategories>
+            <li>BuildingsFurniture</li>
+        </thingCategories>
+        <tradeability>Buyable</tradeability>
+        <thingSetMakerTags>
+            <li>RewardSpecial</li>
+        </thingSetMakerTags>
+        <tradeTags>
+            <li>ExoticMisc</li>
+        </tradeTags>
+    </ThingDef>
+</Defs>
