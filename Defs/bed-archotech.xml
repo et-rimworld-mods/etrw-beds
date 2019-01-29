@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <ThingDef ParentName="BuildingBase">
+    <ThingDef ParentName="BedBase">
         <defName>ArchotechBed</defName>
         <label>Enertron</label>
         <description>A person-sized metal sarcophagus, filled with mysterious technology. Hypothesized to have been produced by an advanced civilization in an alternate universe, then transplanted by an archotech AI.\n\nRegardless of its origins, it provides the user with a full night's sleep in a fraction of the time, and helps heal infections. It even has a built-in lamp, that illuminates organs during surgery!\n\nIt does however cause pain while its in operation, and induces nausea in people who look at it for too long.</description>
@@ -18,10 +18,25 @@
         <defaultPlacingRot>South</defaultPlacingRot>
         <rotatable>true</rotatable>
         <drawGUIOverlay>true</drawGUIOverlay>
+        <staticSunShadowHeight>0.17</staticSunShadowHeight>
+        <castEdgeShadows>True</castEdgeShadows>
 
+        <!--
+        beds need to subclass Building_Bed AND have a cost, in order to not get the "slept on floor" debuff
+        https://ludeon.com/forums/index.php?topic=47810.msg452288#msg452288
+         -->
+        <costList>
+            <Gold>20</Gold>
+            <Silver>100</Silver>
+            <Uranium>50</Uranium>
+            <Steel>300</Steel>
+            <Plasteel>50</Plasteel>
+            <ComponentIndustrial>20</ComponentIndustrial>
+            <ComponentSpacer>5</ComponentSpacer>
+        </costList>
+
+        <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
         <tickerType>Normal</tickerType>
-        <canOverlapZones>false</canOverlapZones>
-        <thingClass>Building_Bed</thingClass>
         <blockWind>true</blockWind>
         <statBases>
             <MaxHitPoints>350</MaxHitPoints>
@@ -32,7 +47,7 @@
             <Comfort>-10</Comfort>
             <Beauty>-500</Beauty>
 
-            <BedRestEffectiveness>2.0</BedRestEffectiveness>
+            <BedRestEffectiveness>4.0</BedRestEffectiveness>
             <ImmunityGainSpeedFactor>2.0</ImmunityGainSpeedFactor>
             <MedicalTendQualityOffset>0.1</MedicalTendQualityOffset>
             <SurgerySuccessChanceFactor>1.2</SurgerySuccessChanceFactor>
@@ -43,24 +58,15 @@
             <bed_healPerDay>15</bed_healPerDay>
         </building>
         <comps>
-            <li Class="CompProperties_RoomIdentifier">
-                <roomStat>Impressiveness</roomStat>
-            </li>
             <li Class="CompProperties_Explosive">
                 <explosiveRadius>3</explosiveRadius>
                 <explosiveDamageType>Bomb</explosiveDamageType>
             </li>
         </comps>
-        <fillPercent>0.5</fillPercent>
-        <pathCost>70</pathCost>
-        <passability>PassThroughOnly</passability>
-        <castEdgeShadows>True</castEdgeShadows>
+        <fillPercent>0.6</fillPercent>
+        <pathCost>80</pathCost>
         <techLevel>Ultra</techLevel>
         <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-        <minifiedDef>MinifiedThing</minifiedDef>
-        <thingCategories>
-            <li>BuildingsFurniture</li>
-        </thingCategories>
         <tradeability>Sellable</tradeability>
         <thingSetMakerTags>
             <li>RewardSpecial</li>
