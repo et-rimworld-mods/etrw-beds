@@ -18,14 +18,14 @@
         <defaultPlacingRot>South</defaultPlacingRot>
         <rotatable>true</rotatable>
         <drawGUIOverlay>true</drawGUIOverlay>
-        <staticSunShadowHeight>0.17</staticSunShadowHeight>
+        <staticSunShadowHeight>0</staticSunShadowHeight>
         <castEdgeShadows>True</castEdgeShadows>
 
-        <!--
-        beds need to subclass Building_Bed AND have a cost, in order to not get the "slept on floor" debuff
-        https://ludeon.com/forums/index.php?topic=47810.msg452288#msg452288
-         -->
         <costList>
+            <!--
+            beds need to subclass Building_Bed AND have a cost, in order to not get the "slept on floor" debuff
+            https://ludeon.com/forums/index.php?topic=47810.msg452288#msg452288
+             -->
             <Gold>20</Gold>
             <Silver>100</Silver>
             <Uranium>50</Uranium>
@@ -34,7 +34,7 @@
             <ComponentIndustrial>20</ComponentIndustrial>
             <ComponentSpacer>5</ComponentSpacer>
         </costList>
-
+        <designationCategory/>  <!-- override buildability from BedBase -->
         <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
         <tickerType>Normal</tickerType>
         <blockWind>true</blockWind>
@@ -47,7 +47,7 @@
             <Comfort>-10</Comfort>
             <Beauty>-500</Beauty>
 
-            <BedRestEffectiveness>4.0</BedRestEffectiveness>
+            <BedRestEffectiveness>3.0</BedRestEffectiveness>
             <ImmunityGainSpeedFactor>2.0</ImmunityGainSpeedFactor>
             <MedicalTendQualityOffset>0.1</MedicalTendQualityOffset>
             <SurgerySuccessChanceFactor>1.2</SurgerySuccessChanceFactor>
